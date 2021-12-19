@@ -50,3 +50,4 @@ generateVoxFile({
 ```
 This code will make ./dist/vox/my-first-vox-{timestamp}.vox
 ![Basic Vox rendered](./examples/generate-basic-vox.jpeg)
+This image rendered by [Voxel Max](https://voxelmax.com) for iPad
