@@ -1,4 +1,5 @@
 # Vox File Generator
+Generate .vox file (MagicaVoxel) with giving Typescript objects.
 
 ## Basic Usage
 ```typescript
