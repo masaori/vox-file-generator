@@ -2,17 +2,23 @@
   "name": "vox-file-generator",
   "version": "1.0.0",
   "description": "Generate .vox file with giving javascript objects.",
-  "main": "index.ts",
+  "keywords": [".vox", "vox", "MagicaVoxel", "voxel", "voxel art", "generative art"],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "rm -rf ./lib && tsc",
-    "lint": "tslint ./*.ts",
+    "lint": "tslint ./*.ts -p tsconfig.json",
     "format": "npx prettier -w ./*.ts"
   },
-  "author": "",
+  "author": "masaori",
   "license": "ISC",
   "files": [
     "lib/**/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/masaori/vox-file-generator"
+  },
   "devDependencies": {
     "@types/buffer-builder": "^0.2.0",
     "@types/node": "^16.11.10",
