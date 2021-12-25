@@ -257,11 +257,19 @@ export const generateVoxFile = async (conf: GenerateVoxFileConfiguration) => {
   writeChunk(builder, mainChunk)
 
   if (!fs.existsSync(conf.dirctoryPath)) {
-    fs.mkdirSync(conf.dirctoryPath, { recursive: true })
+    try {
+      fs.mkdirSync(conf.dirctoryPath, { recursive: true })
+    } catch(err) {
+      throw new Error(`failed to make directory ${conf.dirctoryPath} : ${err}`)
+    }
   }
+  
   const now = Date.now()
   const resultFilePath = `${conf.dirctoryPath}/${conf.filePrefix}-${format(now, 'yyyyMMdd-HHmmss')}.vox`
-  fs.writeFile(resultFilePath, builder.get(), () => {
-    console.log(`vox file generated successfully at ${resultFilePath}`)
-  })
+  try {
+    fs.writeFileSync(resultFilePath, builder.get())
+  } catch(err) {
+    throw new Error(`failed to write vox file to ${resultFilePath} : ${err}`)
+  }
+  console.log(`vox file generated successfully at ${resultFilePath}`)
 }
