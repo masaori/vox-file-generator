@@ -233,7 +233,7 @@ export type GenerateVoxFileConfiguration = {
   dirctoryPath: string
   filePrefix: string
 }
-export const generateVoxFile = async (conf: GenerateVoxFileConfiguration) => {
+export const generateVoxFile = (conf: GenerateVoxFileConfiguration) => {
   const mainChunk = mainChunkFactory([
     sizeChunkFactory(conf.size),
     xyziChunkFactory({

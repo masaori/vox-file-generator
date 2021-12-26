@@ -1,6 +1,6 @@
 {
   "name": "vox-file-generator",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Generate .vox file with giving javascript objects.",
   "keywords": [".vox", "vox", "MagicaVoxel", "voxel", "voxel art", "generative art"],
   "main": "lib/index.js",
